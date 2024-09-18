@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "Ahsing";
+    src: url("./files/Ahsing-Regular.otf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--fundo);
+    overflow-x: hidden;
+}
+.titulo{
+    padding: 10px;
+    width: calc(100% - 20px);
+    background-color: var(--primaria);
+    color: var(--textoTitulo);
+    font-family: "Ahsing";
+    text-align: center;
+    height: 100px;
+}
+.titulo h1{
+    font-weight: 400;
+    font-size: 30pt;
+    letter-spacing: 3px;
+}
+main{
+    width: calc(100vw-20px);
+}
+.inicio{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 120px);
+    overflow: hidden;
+}
+.content{
+    z-index: 1000;
+}
+.inicio div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgInicio{
+    width: 500px;
+    max-width: calc(100vw - 20px);
+    padding-bottom: 150px;
+}
+.textoInicio{
+    text-align: center;
+    width: 300px;
+}
+.textoInicio h1, .sobre h1, .horarios h1{
+    font-family: "Ahsing";
+    font-weight: normal;
+    letter-spacing: 3px;
+    font-size: 45pt;
+}
+.textoInicio h2, .sobre h2, .horarios h2{
+    font-family: 'Courier New', Courier, monospace;
+    width: 35vw;
+}
+.luise{
+    font-size: 70pt;
+}
+.wave {
+    width: 100vw;
+    height: 350px;
+    max-height: calc(20vh + 150px);
+    margin-top: -400px;
+    animation: shift 1s infinite linear;
+    background: var(--primaria);
+    margin-bottom: -5px;
+}
+.wave2 {
+    width: 100vw;
+    height: 350px;
+    max-height: calc(20vh + 150px);
+    animation: shift 1s infinite linear;
+    background: var(--fundo);
+    margin-left: 0 !important;
+    margin-bottom: -5px;
+}
+.sobre{
+    color: var(--textoTitulo);
+    background-color: var(--primaria);
+}
+.sobre, .horarios{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sobre img, .horarios img{
+    width: 90vw;
+    margin-top: -25vw;
+}
+.sobre div, .horarios div{
+    align-self: flex-start;
+    margin-left: 10vw;
+}
+.pcOnly{
+    display: none;
+}
+.horarios{
+    margin-top: 20vh;
+}
+.sobre .content, .horarios .content{
+    margin-top: 15vh;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: grey;
+}
+footer{
+    background-color: var(--primaria);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+footer a{
+    color: white;
+}
+@keyframes shift {
+    0%, 100% {
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    25% {
+        clip-path: polygon(0% 55%, 12% 58%, 30% 62%, 50% 60%, 70% 57%, 85% 54%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+    75% {
+        clip-path: polygon(0% 55%, 10% 50%, 28% 52%, 50% 56%, 70% 58%, 85% 61%, 100% 63%, 100% 100%, 0% 100%);
+    }
+}
+.sobre h1{
+    width: 50vw;
+}
+@media screen and (min-width: 1100px) {
+    .pcOnly{
+        display: block;
+    }
+    .phoneOnly{
+        display: none;
+    }
+    .inicio{
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    .textoInicio{
+        align-self: flex-start;
+        text-align: left;
+    }
+    .textoInicio h2{
+        width: 100%;
+    }
+    .imgInicio{
+        width: 40vw;
+        justify-self: center;
+        padding-bottom: 20vh;
+    }
+}
+@media screen and (max-height: 855px) and (max-width: 1100px) {
+    .luise{
+        font-size: 8vh;
+    }
+    .textoInicio h1{
+        font-size: 5vh;
+    }
+    .textoInicio{
+        width: 16vw;
+    }
+}
+@media screen and (max-height: 600px) {
+    .imgInicio{
+        width: 80vh;
+    }
+    .luise{
+        font-size: 15vh;
+    }
+    .textoInicio h1{
+        font-size: 9vh;
+    }
+    .textoInicio{
+        width: 16vw;
+    }
+}
+@media screen and (min-height: 850px) {
+    .wave{
+        height: 80vh;
+        margin-top: -67vh;
+    }
+    .wave2{
+        height: 80vh;
+        max-height: 80vh;
+    }
+    .imgInicio{
+        width: 800px;
+        justify-self: center;
+        padding-bottom: 40vh;
+    }
+}
